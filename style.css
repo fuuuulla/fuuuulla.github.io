@@ -14,6 +14,8 @@ body {
 header {
   background: white;
   padding: 15px 40px;
+  position: sticky;
+  top: 0;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
@@ -28,8 +30,8 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 
 nav ul li {
@@ -40,10 +42,6 @@ nav ul li a {
   text-decoration: none;
   color: #555;
   font-weight: 500;
-}
-
-nav ul li a:hover {
-  color: #c06c84;
 }
 
 /* Hero */
@@ -69,38 +67,44 @@ nav ul li a:hover {
   border-radius: 6px;
 }
 
-.hero p {
-  margin: 15px 0;
-  font-size: 20px;
-}
-
 .hero button {
+  margin-top: 20px;
   padding: 12px 30px;
   border: none;
   background: white;
   color: #c06c84;
   border-radius: 30px;
-  cursor: pointer;
   font-weight: 600;
-  transition: 0.3s;
+  cursor: pointer;
 }
 
-.hero button:hover {
-  transform: scale(1.05);
-}
-
-/* Projects */
-.projects {
+/* Sections */
+section {
   padding: 70px 40px;
   text-align: center;
 }
 
-.projects h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
+h2 {
   color: #c06c84;
+  margin-bottom: 25px;
 }
 
+/* Skills */
+.skill-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-box span {
+  background: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* Projects */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -123,14 +127,30 @@ nav ul li a:hover {
 .contact {
   background: #c06c84;
   color: white;
-  padding: 60px;
-  text-align: center;
+}
+
+.socials a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* Footer */
 footer {
-  background: #fff;
-  text-align: center;
+  background: white;
   padding: 15px;
   color: #999;
+}
+
+/* Animation */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
