@@ -2,19 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <title>Fulla | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Hello, I'm Fulla</h1>
+<header>
+  <nav>
+    <h2 class="logo">Fulla.dev</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Hello, I'm <span>Fulla</span></h1>
   <p>Fullstack Developer</p>
+  <button onclick="scrollToProjects()">View My Work</button>
+</section>
 
+<section id="projects" class="projects">
   <h2>My Projects</h2>
-  <ul>
-    <li>Project One</li>
-    <li>Project Two</li>
-  </ul>
 
+  <div class="cards">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio using HTML, CSS & JS.</p>
+    </div>
+
+    <div class="card">
+      <h3>E-Commerce App</h3>
+      <p>Online shop with modern UI.</p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboard App</h3>
+      <p>Admin dashboard with clean design.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <b>fulla.dev@gmail.com</b></p>
+</section>
+
+<footer>
+  <p>© 2026 Fulla | Made with 💖</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
