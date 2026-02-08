@@ -1,156 +1,94 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fulla | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background:#faeef1; color:#444;">
 
-body {
-  background: #faeef1;
-  color: #444;
-}
+<header style="background:#ffffff;">
+  <nav>
+    <h2 class="logo" style="color:#c06c84;">Fulla.dev</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-/* Navbar */
-header {
-  background: white;
-  padding: 15px 40px;
-  position: sticky;
-  top: 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
+<!-- HERO -->
+<section id="home" class="hero"
+  style="background:linear-gradient(135deg,#f7c6d0,#c06c84);">
+  <h1>Hello, I'm <span>Fulla</span></h1>
+  <p>Fullstack Developer</p>
+  <button onclick="scrollToSection('projects')">View My Work</button>
+</section>
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<!-- ABOUT -->
+<section id="about" class="about fade" style="background:#faeef1;">
+  <h2>About Me</h2>
+  <p>
+    Passionate girl developer who loves building elegant,
+    modern and user-friendly web applications.
+  </p>
+</section>
 
-.logo {
-  color: #c06c84;
-}
+<!-- SKILLS -->
+<section id="skills" class="skills fade" style="background:#fff;">
+  <h2>My Skills</h2>
 
-nav ul {
-  display: flex;
-  list-style: none;
-}
+  <div class="skill-box">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Java</span>
+    <span>MySQL</span>
+  </div>
+</section>
 
-nav ul li {
-  margin-left: 20px;
-}
+<!-- PROJECTS -->
+<section id="projects" class="projects fade" style="background:#faeef1;">
+  <h2>My Projects</h2>
 
-nav ul li a {
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-}
+  <div class="cards">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Soft pink portfolio with modern UI.</p>
+    </div>
 
-/* Hero */
-.hero {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #f8b5c1, #c06c84);
-  color: white;
-  text-align: center;
-}
+    <div class="card">
+      <h3>E-Commerce App</h3>
+      <p>Online shop with elegant design.</p>
+    </div>
 
-.hero h1 {
-  font-size: 48px;
-}
+    <div class="card">
+      <h3>Dashboard</h3>
+      <p>Admin dashboard with clean layout.</p>
+    </div>
+  </div>
+</section>
 
-.hero span {
-  background: white;
-  color: #c06c84;
-  padding: 0 10px;
-  border-radius: 6px;
-}
+<!-- CONTACT -->
+<section id="contact" class="contact fade"
+  style="background:#c06c84; color:white;">
+  <h2>Contact Me</h2>
+  <p>Email: <b>fulla.dev@gmail.com</b></p>
 
-.hero button {
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: none;
-  background: white;
-  color: #c06c84;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-}
+  <div class="socials">
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+  </div>
+</section>
 
-/* Sections */
-section {
-  padding: 70px 40px;
-  text-align: center;
-}
+<footer style="background:#fff;">
+  <p>© 2026 Fulla | Made with 💖</p>
+</footer>
 
-h2 {
-  color: #c06c84;
-  margin-bottom: 25px;
-}
-
-/* Skills */
-.skill-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.skill-box span {
-  background: white;
-  padding: 12px 25px;
-  border-radius: 25px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
-
-/* Projects */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-/* Contact */
-.contact {
-  background: #c06c84;
-  color: white;
-}
-
-.socials a {
-  margin: 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* Footer */
-footer {
-  background: white;
-  padding: 15px;
-  color: #999;
-}
-
-/* Animation */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+<script src="script.js"></script>
+</body>
+</html>
